@@ -1,19 +1,6 @@
 <template>
-  <div>
-    <h1>La illa d'AMP</h1>
-    <AppSearchInput />
-    <ul>
-      <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <img :src="article.img" />
-          <div>
-            <h2>{{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
-            <p>{{ article.description }}</p>
-          </div>
-        </NuxtLink>
-      </li>
-    </ul>
+  <div class="container">
+    <img class="mapa" src="https://camo.githubusercontent.com/b314dff28b836db80966fece1c49896d6e8788ef/68747470733a2f2f696e6b61726e6174652d6170692d61732d70726f64756374696f6e2e73332e616d617a6f6e6177732e636f6d2f6d3935336568776d363570387061746f34666b737968776e39336530" />
   </div>
 </template>
 
@@ -33,6 +20,9 @@
 </script>
 
 <style>
+body {
+  background: lightgrey;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -40,6 +30,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+}
+
+.mapa {
+  margin: 50px auto;
+  width: 1200px;
+  display: block;
 }
 
 .title {
